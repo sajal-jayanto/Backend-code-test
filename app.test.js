@@ -26,4 +26,12 @@ describe('/GET -> /files/:publicKey', () => {
     expect(response.statusCode).toBe(200);
   });
 
+  test("It should response the POST method", async () => {
+    const filePath = `${__dirname}/test-upload/diu.jpeg`;
+    const response = await request(app)
+      .post("/files")
+      .attach('file', filePath);
+    expect(response.statusCode).toBe(201);
+  });
+
 });
