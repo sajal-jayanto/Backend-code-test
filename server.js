@@ -41,7 +41,7 @@ app.post('/files', async (req, res) => {
   }
   try {
     const file = req.files.file;
-    const uploadPath = `${__dirname} / ${process.env.FOLDER || "upload"} / ${file.name}`;
+    const uploadPath = `${__dirname}/${process.env.FOLDER || "upload"}/${file.name}`;
     await file.mv(uploadPath);
 
     res.status(201).json({
@@ -65,7 +65,7 @@ app.delete("/files/:privateKey", validator.params(
   if (config.privateKey !== privateKey) {
     throw new Error("Invalid private key.")
   }
-  const directory = `${__dirname} / ${process.env.FOLDER || "upload"}`;
+  const directory = `${__dirname}/${process.env.FOLDER || "upload"}`;
   fs.readdir(directory, (err, files) => {
     if (err) return res.status(500).send(err);
     for (const file of files) {
