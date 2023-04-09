@@ -10,6 +10,9 @@ FOLDER=upload
 ```
 
 install cmd -> `npm install`
+
 run cmd -> `npm start`
+
 run test cmd -> `npm test`
+
 run as dev cmd -> `npm run start:dev`
