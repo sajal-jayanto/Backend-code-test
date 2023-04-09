@@ -9,8 +9,7 @@ PORT=3000
 FOLDER=upload
 ```
 
-next cmd -> `npm install`
-
+install cmd -> `npm install`
 run cmd -> `npm start`
-
+run test cmd -> `npm test`
 run as dev cmd -> `npm run start:dev`
